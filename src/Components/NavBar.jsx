@@ -1,6 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import IconCart from "./IconCart";
+import CartWidget from "./CartWidget";
 
 
 export default function NavBar(){
@@ -37,7 +37,7 @@ export default function NavBar(){
                             </a>
                         </li>
                         <li className="d-inline-block">
-                            <IconCart/>
+                            <CartWidget/>
                         </li>
                     </ul>
                 </div>

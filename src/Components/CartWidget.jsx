@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export default function iconCart(){
+export default function CartWidget(){
     return(
     <>
         🛒(0)

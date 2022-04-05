@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import NavBar from './Components/NavBar';
-import MainContainer from './Components/MainContainer';
+import ItemListContainer from './Components/ItemListContainer';
 
 // import Contador from './Components/Contador';
 
@@ -11,7 +11,7 @@ export default function App() {
           <>
             <NavBar/> 
             {/* <Contador/> */}
-            <MainContainer/>
+            <ItemListContainer/>
           </>
 
 
