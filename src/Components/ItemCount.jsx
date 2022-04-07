@@ -12,7 +12,7 @@ export default function ItemCount({onAdd,stock,initial}){
         }
     }
     function quitar(){
-        if(cant>0){
+        if(cant>initial){
             setCant(cant - 1);
         }
     }
@@ -23,7 +23,7 @@ export default function ItemCount({onAdd,stock,initial}){
         <>
             <div className="d-flex justify-content-center">
                 <Button variant="dark" onClick={()=> agregar()}>+</Button>
-                {cant}
+                <p>{cant}</p>
                 <Button variant="dark" onClick={()=> quitar()}>-</Button>
                 <br />
                 <br />

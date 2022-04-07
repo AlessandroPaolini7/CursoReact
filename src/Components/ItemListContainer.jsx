@@ -1,22 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Main from "./Main";
 import ItemCount from "./ItemCount"
 
-export default function ItemListContainer(){
-    const mediosPago = ["USDT","ETH","BTC","MercadoPago","Transferencia Bancaria"];
+// export default function ItemListContainer(){
+//     const mediosPago = ["USDT","ETH","BTC","MercadoPago","Transferencia Bancaria"];
     
-    function onAdd(cant){
-        if(cant>0){
-            alert("Agregaste " + cant + " items al carrito");
-        }
-    }
+//     function onAdd(cant){
+//         if(cant>0){
+//             alert("Agregaste " + cant + " items al carrito");
+//         }
+//     }
     
     
     
-    return(
-        <>
-        <Main formaPago={mediosPago}/>
-        <ItemCount onAdd={onAdd} stock={5} initial={1}/>
-        </>
-    )
+//     return(
+//         <>
+//         <Main formaPago={mediosPago}/>
+//         
+//         </>
+//     )
+// }
+
+import ItemList from "./ItemList";
+import customFetch from "../util/customFetch";
+import productos from "../util/productos";
+
+function ItemListContainer() {
+    const [items, setItems] = useState([]);
+
+    useEffect(()=>{
+        customFetch(2000,productos)
+        .then(resultado => setItems(resultado))
+        .catch(error => console.log(error));
+    },[items])
+
+return (
+    <ItemList productos={items}/>
+)
 }
+
+export default ItemListContainer
