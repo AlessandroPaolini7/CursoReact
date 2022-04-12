@@ -1,0 +1,11 @@
+.containerDetail {
+    display: flex;
+    justify-content: space-between;
+    max-width: 120px;
+}
+
+.photoDetail{
+    padding: 40%;
+    border: 5px solid rgb(224, 224, 224);
+    border-radius: 2%;
+}

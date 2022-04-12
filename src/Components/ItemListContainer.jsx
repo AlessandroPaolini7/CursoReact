@@ -35,7 +35,9 @@ function ItemListContainer() {
     },[items])
 
 return (
+    <div className="container-fluid row justify-content-around">
     <ItemList productos={items}/>
+    </div>
 )
 }
 

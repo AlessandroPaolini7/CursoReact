@@ -13,3 +13,4 @@ const customFetch = (time,task) => {
 }
 
 export default customFetch
+

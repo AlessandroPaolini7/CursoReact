@@ -10,7 +10,8 @@ function Item({id,nombre,precio,imagen}) {
         }
     }
   return (
-            <Card className="d-inline-block" key={id} style={{ width: '18rem' }}>
+        
+            <Card className="" key={id} style={{ width: '18rem' }}>
         <Card.Img variant="top" src={imagen} />
         <Card.Body>
             <Card.Title>{nombre}</Card.Title>
