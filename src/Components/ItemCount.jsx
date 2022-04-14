@@ -2,6 +2,11 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 
 export default function ItemCount({onAdd,stock,initial}){
+    function onAdd(cant){
+        if(cant>0){
+            alert("Agregaste " + cant + " items al carrito");
+        }
+    }
     
     
     const[cant,setCant] = useState(initial);
@@ -21,7 +26,7 @@ export default function ItemCount({onAdd,stock,initial}){
     
     return(
         <>
-            <div className="d-flex justify-content-center">
+            <div className="d-flex ">
                 <Button variant="dark" onClick={()=> agregar()}>+</Button>
                 <p>{cant}</p>
                 <Button variant="dark" onClick={()=> quitar()}>-</Button>
@@ -31,7 +36,7 @@ export default function ItemCount({onAdd,stock,initial}){
             </div>
             <br />
             
-            <div className="d-flex justify-content-center">
+            <div className="d-flex ">
                 <Button variant="dark" onClick={()=> onAdd(cant)}>Comprar</Button>
             </div>
         </>

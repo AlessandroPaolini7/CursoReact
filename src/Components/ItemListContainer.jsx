@@ -1,38 +1,25 @@
 import React, { useEffect, useState } from "react";
-import Main from "./Main";
-import ItemCount from "./ItemCount"
-
-// export default function ItemListContainer(){
-//     const mediosPago = ["USDT","ETH","BTC","MercadoPago","Transferencia Bancaria"];
-    
-//     function onAdd(cant){
-//         if(cant>0){
-//             alert("Agregaste " + cant + " items al carrito");
-//         }
-//     }
-    
-    
-    
-//     return(
-//         <>
-//         <Main formaPago={mediosPago}/>
-//         
-//         </>
-//     )
-// }
-
 import ItemList from "./ItemList";
-import customFetch from "../util/customFetch";
+import traerProductos from "../util/traerProductos";
 import productos from "../util/productos";
+import { useParams } from "react-router-dom";
 
 function ItemListContainer() {
     const [items, setItems] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const {categoryId} = useParams();
 
     useEffect(()=>{
-        customFetch(2000,productos)
-        .then(resultado => setItems(resultado))
-        .catch(error => console.log(error));
-    },[items])
+        setLoading(true);
+        traerProductos(categoryId)
+            .then(resultado => setItems(resultado))
+            .catch(error => console.log(error))
+            .finally(()=>setLoading(false));
+    },[categoryId]);
+
+    if(loading){
+        return <h1>Cargando...</h1>
+    }
 
 return (
     <div className="container-fluid row justify-content-around">

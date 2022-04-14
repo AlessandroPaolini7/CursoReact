@@ -6,10 +6,7 @@ import Item from './Item'
 return(
         productos.map(p => (
             <Item
-            key = {p.id}
-            nombre = {p.nombre}
-            precio = {p.precio}
-            imagen = {p.imagen}
+            producto = {p}
             />
             ))
         )

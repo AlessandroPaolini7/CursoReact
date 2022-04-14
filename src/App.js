@@ -1,20 +1,25 @@
-import logo from './logo.svg';
 import NavBar from './Components/NavBar';
 import ItemListContainer from './Components/ItemListContainer';
 import ItemDetailCointainer from './Components/ItemDetailCointainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 
-// import Contador from './Components/Contador';
 
 export default function App() {
 
 
   return (
-          <>
+          <BrowserRouter>
             <NavBar/>
-            <ItemDetailCointainer/>
-            <ItemListContainer/>
-            
-          </>
+              <Routes>
+                <Route path="/" element={<ItemListContainer/>} />
+                <Route 
+                  path="/category/:categoryId" 
+                  element={<ItemListContainer/>} 
+                />
+                <Route path="/item/:id" element={<ItemDetailCointainer/>} 
+                />
+              </Routes>
+          </BrowserRouter>
 
 
   )

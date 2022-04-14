@@ -1,6 +1,7 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 
 export default function NavBar(){
@@ -10,33 +11,27 @@ export default function NavBar(){
     return(
             <>
             <div className="container-fluid row bg-dark " >
-                <h1 className="bg-dark text-white">ElectroShop</h1>
+                <h1><Link to='/' className="bg-dark text-white">ElectroShop</Link></h1>
                     <ul className="nav justify-content-center flex-row flex-md-row">
-                        <li className="d-inline-block"><a className="navbar-brand text-white " href="#">
+                        <Link to='/category/celulares' className="d-inline-block navbar-brand text-white">
                             Celulares
-                            </a>
-                        </li>
-                        <li className="d-inline-block"><a className="navbar-brand text-white " href="#">
+                        </Link>
+                        <Link to='/category/auriculares' className="d-inline-block navbar-brand text-white">
                             Auriculares
-                            </a>
-                        </li>
-                        <li className="d-inline-block"><a className="navbar-brand text-white " href="#">
+                        </Link>
+                        <Link to='/category/consolas' className="d-inline-block navbar-brand text-white">
                             Consolas
-                            </a>
-                        </li>
-                        <li className="d-inline-block"><a className="navbar-brand text-white " href="#">
+                        </Link>
+                        <Link to='/category/parlantes' className="d-inline-block navbar-brand text-white">
                             Parlantes
-                            </a>
-                        </li>
-                        <li className="d-inline-block"><a className="navbar-brand text-white " href="#">
-                            Notebooks
-                            </a>
-                        </li>
-                        <li className="d-inline-block"><a className="navbar-brand text-white " href="#">
+                        </Link>
+                        <Link to='/category/tablets' className="d-inline-block navbar-brand text-white">
+                            Tablets
+                        </Link>
+                        <Link to='/category/hardware' className="d-inline-block navbar-brand text-white">
                             Hardware
-                            </a>
-                        </li>
-                        <li className="d-inline-block">
+                        </Link>
+                        <li className="d-inline-block navbar-brand text-white">
                             <CartWidget/>
                         </li>
                     </ul>
