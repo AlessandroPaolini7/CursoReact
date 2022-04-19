@@ -2,8 +2,17 @@ import React from 'react';
 import styles from './ItemDetail.module.css';
 import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
+import {useState} from 'react';
 
 function ItemDetail({producto}) {
+
+  const [band,setBand] = useState(false);
+
+
+  const onAdd = ()=>{
+    setBand(true);
+    }
+
   return (
     <>
       <div className={styles.containerDetail}>
@@ -15,8 +24,9 @@ function ItemDetail({producto}) {
           <p>{producto.detail}</p>
           <h4>{producto.price}</h4>
           <h5>#{producto.category}</h5>
-          <ItemCount  stock={5} initial={1}/> 
-          {/*  onAdd={onAdd} */}
+          {
+          band ? <Link to='/cart'>Ir al carrito</Link> : <ItemCount  stock={5} initial={1} onAdd={onAdd}/>
+        }
         </div>
         <br/>
         <br />
