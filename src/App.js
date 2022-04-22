@@ -3,12 +3,13 @@ import ItemListContainer from './Components/ItemListContainer';
 import ItemDetailCointainer from './Components/ItemDetailCointainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 import Cart from './Components/Cart';
-
+import CartContextProvider from './Components/CartContextProvider';
 
 export default function App() {
 
 
   return (
+        <CartContextProvider>
           <BrowserRouter>
             <NavBar/>
               <Routes>
@@ -18,11 +19,10 @@ export default function App() {
                   element={<ItemListContainer/>} 
                 />
                 <Route path="/item/:id" element={<ItemDetailCointainer/>} />
-                <Route path="/cart" element={<Cart/>} />
+                <Route path="/cartdetail" element={<Cart/>} />
               </Routes>
           </BrowserRouter>
-
-
+        </CartContextProvider>
   )
 }
 

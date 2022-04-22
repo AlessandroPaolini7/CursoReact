@@ -2,16 +2,22 @@ import React from 'react';
 import styles from './ItemDetail.module.css';
 import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
-import {useState} from 'react';
+import {useState,useContext} from 'react';
+import { CartContext } from './CartContextProvider';
+
 
 function ItemDetail({producto}) {
 
+  const {addToCart} = useContext(CartContext);
   const [band,setBand] = useState(false);
 
-
-  const onAdd = ()=>{
+  function onAdd({cant}){
     setBand(true);
-    }
+    producto.count = cant;
+    addToCart(producto)
+  }
+
+
 
   return (
     <>
@@ -25,7 +31,7 @@ function ItemDetail({producto}) {
           <h4>{producto.price}</h4>
           <h5>#{producto.category}</h5>
           {
-          band ? <Link to='/cart'>Ir al carrito</Link> : <ItemCount  stock={5} initial={1} onAdd={onAdd}/>
+          band ? <Link to='/cartdetail'>Ir al carrito</Link> : <ItemCount  stock={5} initial={1} onAdd={onAdd}/>
         }
         </div>
         <br/>

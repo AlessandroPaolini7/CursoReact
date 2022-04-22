@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 
-export default function ItemCount({stock,initial,onAdd}){
+
+export default function ItemCount({stock,initial,onAdd}) {
     
     
     const[cant,setCant] = useState(initial);
@@ -30,9 +31,9 @@ export default function ItemCount({stock,initial,onAdd}){
                 
             </div>
             <br />
-            
+
             <div className="d-flex ">
-                <Button variant="dark" onClick={()=> onAdd()}>Comprar</Button>
+                <Button variant="dark" onClick={()=> onAdd({cant})}>Comprar</Button>
             </div>
         </>
     )
