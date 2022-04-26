@@ -2,11 +2,12 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
-
+import { CartContext } from "./CartContextProvider";
+import { useContext } from "react";
 
 export default function NavBar(){
 
-
+    const {cart} = useContext(CartContext);
 
     return(
             <>
@@ -31,9 +32,12 @@ export default function NavBar(){
                         <Link to='/category/hardware' className="d-inline-block navbar-brand text-white">
                             Hardware
                         </Link>
-                        <li className="d-inline-block navbar-brand text-white">
-                            <CartWidget/>
-                        </li>
+                        {cart.length !==0 ?
+                            <Link to ='/cartdetail'className="d-inline-block navbar-brand text-white">
+                                <CartWidget/> 
+                            </Link>
+                            : null
+                        }
                     </ul>
                 </div>
                 

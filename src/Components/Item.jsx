@@ -16,7 +16,7 @@ function Item({producto}) {
         <Card.Body>
             <Card.Title>{producto.name}</Card.Title>
             <Card.Text>
-            {producto.price}
+            ${producto.price}
             </Card.Text>
             
             <Link to = {`/item/${producto.id}`}>Ver detalle</Link>

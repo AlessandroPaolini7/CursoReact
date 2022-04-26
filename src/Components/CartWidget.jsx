@@ -5,9 +5,14 @@ import { CartContext } from "./CartContextProvider";
 
 
 export default function CartWidget(){
-    const {cart} = useContext(CartContext);
+    let {cart} = useContext(CartContext);
+
+    let total = 0;
+    cart.forEach(item => { 
+        total+=item.count
+    });
     return(
     <>
-        🛒({cart.length})
+        🛒({total})
     </>)
 }

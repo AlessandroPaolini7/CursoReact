@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 import {useState,useContext} from 'react';
 import { CartContext } from './CartContextProvider';
+import { Button } from 'react-bootstrap';
 
 
 function ItemDetail({producto}) {
@@ -28,10 +29,10 @@ function ItemDetail({producto}) {
         <div className={styles.productDetail}>
           <h2>{producto.name}</h2>
           <p>{producto.detail}</p>
-          <h4>{producto.price}</h4>
+          <h4>${producto.price}</h4>
           <h5>#{producto.category}</h5>
           {
-          band ? <Link to='/cartdetail'>Ir al carrito</Link> : <ItemCount  stock={5} initial={1} onAdd={onAdd}/>
+          band ? <Link to='/cartdetail' className='text-white'><Button variant='dark'>Ir al carrito</Button></Link> : <ItemCount  stock={5} initial={1} onAdd={onAdd}/>
         }
         </div>
         <br/>
