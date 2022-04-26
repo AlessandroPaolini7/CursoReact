@@ -14,8 +14,7 @@ function ItemDetail({producto}) {
 
   function onAdd({cant}){
     setBand(true);
-    producto.count = cant;
-    addToCart(producto)
+    addToCart(producto,cant)
   }
 
 

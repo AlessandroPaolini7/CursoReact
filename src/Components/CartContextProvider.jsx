@@ -1,4 +1,5 @@
 import React, { useState, createContext, useEffect } from 'react';
+import productos from '../util/productos';
 
 export const CartContext = createContext();
 
@@ -14,13 +15,14 @@ const CartContextProvider = ({ children }) => {
   }, [cart]);
 
   
-  const addToCart = (product) => {
+  const addToCart = (product,cant) => {
     const indexProduct = cart.findIndex((cartItem) => cartItem.id === product.id);
     if (indexProduct !== -1) {
       const newCart = [...cart];
-      newCart[indexProduct].count = newCart[indexProduct].count + product.count;
+      newCart[indexProduct].count = cart[indexProduct].count + cant;
       setCart(newCart);
     } else {
+      product.count = cant;
       setCart([...cart, product]);
     }
   };
