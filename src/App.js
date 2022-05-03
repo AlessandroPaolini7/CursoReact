@@ -4,6 +4,7 @@ import ItemDetailCointainer from './Components/ItemDetailCointainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 import Cart from './Components/Cart';
 import CartContextProvider from './Components/CartContextProvider';
+import Formulario from './Components/Formulario';
 
 export default function App() {
 
@@ -20,6 +21,7 @@ export default function App() {
                 />
                 <Route path="/item/:id" element={<ItemDetailCointainer/>} />
                 <Route path="/cartdetail" element={<Cart/>} />
+                <Route path="/form" element={<Formulario/>} />
               </Routes>
           </BrowserRouter>
         </CartContextProvider>

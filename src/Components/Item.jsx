@@ -18,8 +18,7 @@ function Item({producto}) {
             <Card.Text>
             ${producto.price}
             </Card.Text>
-            
-            <Link to = {`/item/${producto.id}`}>Ver detalle</Link>
+            <Link to = {`/item/${producto.id}`}><a className='button'>Ver detalle</a></Link>
         </Card.Body>
         </Card>
   )

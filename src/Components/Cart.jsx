@@ -27,7 +27,7 @@ function Cart() {
                   <div className='d-flex justify-content-around'>
                     <h4>{item.name}</h4>
                     <h4>{item.count}</h4>
-                    <h4>${item.price * item.count}</h4>
+                    <h4>${item.price }</h4>
                     <div>
                       <img src={item.image} style={{ width: '50px' ,height: '100px'}}/> 
                       <Button variant='btn btn-danger' onClick={() => removeFromCart(item.id)}>Eliminar</Button>
@@ -39,7 +39,7 @@ function Cart() {
             <h3 className='d-flex justify-content-center'>Total: ${total}</h3>
               <div className="d-flex justify-content-center">
                 <br/><br/>
-                <Button variant='dark' onClick={() => buyAll()}>Comprar</Button>
+                <Link to='/form'><Button variant='dark'>Comprar</Button></Link>
           </div>
         </div>
         : <div >
