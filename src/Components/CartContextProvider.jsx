@@ -1,5 +1,5 @@
-import React, { useState, createContext, useEffect } from 'react';
-import productos from '../util/productos';
+import React, { useState, createContext} from 'react';
+
 
 export const CartContext = createContext();
 

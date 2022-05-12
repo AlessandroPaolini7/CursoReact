@@ -11,29 +11,29 @@ export default function NavBar(){
 
     return(
             <>
-            <div className="container-fluid row bg-dark " >
+            <div className="row-fluid bg-dark " >
                 <h1><Link to='/' className="bg-dark text-white">ElectroShop</Link></h1>
                     <ul className="nav justify-content-center flex-row flex-md-row">
-                        <Link to='/category/celulares' className="d-inline-block navbar-brand text-white">
+                        <Link to='/category/celulares' className="d-inline-block navbar-brand ">
                             Celulares
                         </Link>
-                        <Link to='/category/auriculares' className="d-inline-block navbar-brand text-white">
+                        <Link to='/category/auriculares' className="d-inline-block navbar-brand">
                             Auriculares
                         </Link>
-                        <Link to='/category/consolas' className="d-inline-block navbar-brand text-white">
+                        <Link to='/category/consolas' className="d-inline-block navbar-brand ">
                             Consolas
                         </Link>
-                        <Link to='/category/parlantes' className="d-inline-block navbar-brand text-white">
+                        <Link to='/category/parlantes' className="d-inline-block navbar-brand ">
                             Parlantes
                         </Link>
-                        <Link to='/category/tablets' className="d-inline-block navbar-brand text-white">
+                        <Link to='/category/tablets' className="d-inline-block navbar-brand ">
                             Tablets
                         </Link>
-                        <Link to='/category/hardware' className="d-inline-block navbar-brand text-white">
+                        <Link to='/category/hardware' className="d-inline-block navbar-brand ">
                             Hardware
                         </Link>
                         {cart.length !==0 ?
-                            <Link to ='/cartdetail'className="d-inline-block navbar-brand text-white">
+                            <Link to ='/cartdetail'className="d-inline-block navbar-brand ">
                                 <CartWidget/> 
                             </Link>
                             : null

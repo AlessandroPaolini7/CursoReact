@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Cart from './Components/Cart';
 import CartContextProvider from './Components/CartContextProvider';
 import Formulario from './Components/Formulario';
+import FinCompra from './Components/FinCompra';
 
 export default function App() {
 
@@ -16,12 +17,11 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<ItemListContainer/>} />
                 <Route 
-                  path="/category/:categoryId" 
-                  element={<ItemListContainer/>} 
-                />
+                  path="/category/:categoryId" element={<ItemListContainer/>} />
                 <Route path="/item/:id" element={<ItemDetailCointainer/>} />
                 <Route path="/cartdetail" element={<Cart/>} />
                 <Route path="/form" element={<Formulario/>} />
+                <Route path="/fincompra" element={<FinCompra/>} />
               </Routes>
           </BrowserRouter>
         </CartContextProvider>

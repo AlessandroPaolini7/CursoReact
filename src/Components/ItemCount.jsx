@@ -23,9 +23,9 @@ export default function ItemCount({stock,initial,onAdd}) {
     return(
         <>
             <div className="d-flex ">
-                <Button variant="dark" onClick={()=> agregar()}>+</Button>
-                <p>{cant}</p>
-                <Button variant="dark" onClick={()=> quitar()}>-</Button>
+                <Button id='buttonDetail' variant="dark" onClick={()=> agregar()}><strong>+</strong></Button>
+                <p><strong>{cant}</strong></p>
+                <Button id='buttonDetail' variant="dark" onClick={()=> quitar()}><strong>-</strong></Button>
                 <br />
                 <br />
                 
@@ -33,7 +33,7 @@ export default function ItemCount({stock,initial,onAdd}) {
             <br />
 
             <div className="d-flex ">
-                <Button variant="dark" onClick={()=> onAdd({cant})}>Comprar</Button>
+                <Button id='buttonDetail' variant="dark" onClick={()=> onAdd({cant})}>Comprar</Button>
             </div>
         </>
     )
