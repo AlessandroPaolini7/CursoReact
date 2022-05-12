@@ -12,12 +12,12 @@ function ItemDetail({producto}) {
   const {addToCart} = useContext(CartContext);
   const [band,setBand] = useState(false);
 
+  //Una vez que se agrega el producto al carrito, se cambia el estado de la bandera, facilitando
+  //el acceso a la sección del carrito.
   function onAdd({cant}){
     setBand(true);
     addToCart(producto,cant)
   }
-
-
 
   return (
     <>
@@ -35,23 +35,6 @@ function ItemDetail({producto}) {
         }
                     </div>
                 </div>
-
-      {/* <div className={styles.containerDetail}>
-        <div>
-          <img src={producto.image} alt={producto.name}/>
-        </div>
-        <div>
-          <h2>{producto.name}</h2>
-          <p>{producto.detail}</p>
-          <h4>${producto.price}</h4>
-          <h5>#{producto.category}</h5>
-          {
-          band ? <Link to='/cartdetail' className='text-white'><Button variant='dark'>Ir al carrito</Button></Link> : <ItemCount  stock={5} initial={1} onAdd={onAdd}/>
-        }
-        </div>
-        <br/>
-        <br />
-      </div> */}
     </>
   )
 }

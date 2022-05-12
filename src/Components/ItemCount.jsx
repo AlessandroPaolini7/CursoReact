@@ -4,8 +4,9 @@ import Button from "react-bootstrap/Button";
 
 export default function ItemCount({stock,initial,onAdd}) {
     
-    
+    //Seteo la cantidad del producto a adquirir en su mínimo, 1.
     const[cant,setCant] = useState(initial);
+
 
     function agregar(){
         if(cant<stock){
@@ -31,9 +32,8 @@ export default function ItemCount({stock,initial,onAdd}) {
                 
             </div>
             <br />
-
             <div className="d-flex ">
-                <Button id='buttonDetail' variant="dark" onClick={()=> onAdd({cant})}>Comprar</Button>
+                <Button id='buttonDetail' variant="dark" onClick={()=> onAdd({cant})}>Agregar al carrito</Button>
             </div>
         </>
     )

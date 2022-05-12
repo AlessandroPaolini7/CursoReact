@@ -11,15 +11,14 @@ function ItemDetailCointainer() {
     const {id} = useParams();
     const [loading, setLoading] = useState(true);
 
+    //Se carga el producto seleccionado, yéndolo a buscar a la base de datos por su id.
     useEffect(() => {
       const db = getFirestore();
-      
       const productoSeleccionado = doc(db, "productos", id)
       getDoc(productoSeleccionado).then(item =>{
         setProducto({id: item.id, ...item.data()});
       })
       setLoading(false);
-
     },[id]);
 
     if (loading) {

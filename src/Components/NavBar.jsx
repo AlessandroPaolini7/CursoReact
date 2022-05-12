@@ -32,6 +32,7 @@ export default function NavBar(){
                         <Link to='/category/hardware' className="d-inline-block navbar-brand ">
                             Hardware
                         </Link>
+                        {/* Si el carrito tiene productos, se muestra el widget de carrito */}
                         {cart.length !==0 ?
                             <Link to ='/cartdetail'className="d-inline-block navbar-brand ">
                                 <CartWidget/> 

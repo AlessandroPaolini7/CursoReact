@@ -78,3 +78,121 @@ ul a:hover {
 .cart-item{
   border: solid 3px #8a8a8a;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+
+  .card-image{
+    float: left;
+    height: 250px;
+    width: 400px;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+
+  .item-title{
+    font-size: 1rem;
+  }
+
+  .item-price{
+    font-size: 1rem;
+  }
+
+  .item-desc{
+    font-size: 0.6rem;
+  }
+  
+  .item-name{
+    display: flex;
+    justify-content: center;
+  }
+
+  .item-price{
+    display: flex;
+    justify-content: center;
+  }
+
+  .item-cant{
+    display: flex;
+    justify-content: center;
+  }
+
+  .btnEliminar{
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-form{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15%;
+    border-color: #212529;
+    border-width: 10px;
+    border-style: solid;
+    margin: auto;
+  }
+
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 786px){
+
+  .card-image{
+    float: left;
+    height: 350px;
+    width: 400px;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+
+  .item-title{
+    font-size: 1.6rem;
+  }
+
+  .item-price{
+    font-size: 1.6rem;
+  }
+
+  .item-desc{
+    font-size: 0.77rem;
+  }
+  
+  .item-name{
+    display: flex;
+    justify-content: center;
+  }
+
+  .item-price{
+    display: flex;
+    justify-content: center;
+  }
+
+  .item-cant{
+    display: flex;
+    justify-content: center;
+  }
+
+  .btnEliminar{
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-form{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15%;
+    border-color: #212529;
+    border-width: 10px;
+    border-style: solid;
+    margin: auto;
+  }
+
+
+}

@@ -1,6 +1,4 @@
 import React from 'react';
-import { CartContext } from './CartContextProvider';
-import { useContext } from 'react';
 
 function FinCompra({name,email,phone,id}) {
   return (

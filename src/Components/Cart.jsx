@@ -24,15 +24,16 @@ function Cart() {
                     <div className="col-sm-2 p-2"> 
                       <img src={item.image} style={{margin: "0 auto", maxHeight: "50px"}} alt={item.name} className="img-fluid d-block"/>          
                     </div>
-                    <div className="col-sm-4 p-2">
+                    <div className="col-sm-4 p-2 item-name">
                       <h5 className="mb-1">{item.name}</h5>
-                      
-                      <p className="mb-1">${item.price }</p>
                     </div>
-                    <div className="col-sm-4 p-2">
-                      <p className="mb-0">Cant: {item.count}</p>
+                    <div className="col-sm-1 p-2 item-price">
+                      <p className="mb-1 item-price">${item.price }</p>
                     </div>
-                    <div className="col-sm-1 p-2">
+                    <div className="col-sm-4 p-2 item-cant">
+                      <p className="mb-1">Cant: {item.count}</p>
+                    </div>
+                    <div className="col-sm-1 p-2 btnEliminar">
                       <div className='btn btn-danger btn-sm mb-1'>
                         <Button variant='btn btn-danger' onClick={() => removeFromCart(item.id)}>Eliminar</Button>
                       </div>

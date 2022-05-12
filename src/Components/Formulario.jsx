@@ -13,14 +13,15 @@ function Formulario() {
     const [phone, setPhone] = useState('');
     const {cart,buyAll} = useContext(CartContext);
     const [id,setId] = useState('');
-   
 
+    //Calcula el total a pagar, multiplicando la cantidad de productos por el precio.
     let total = 0;
     cart.forEach(item => {
         total += item.price * item.count;
     })
 
-
+    //Funcion que se ejecuta al presionar el boton de comprar. 
+    //Valida datos del form, si estan completos, se agrega el pedido a la base de datos, y se vacia el carrito.
     const terminarCompra = () => {
         if (name === '' || email === '' || phone === '') {
             alert('Por favor, rellene todos los campos');
@@ -52,8 +53,8 @@ return (
     <>
     { id==="" ?     
     <div>
-        <h3 className='d-flex justify-content-center '>Felicitaciones! Ya estás en el final de tu proceso de compra.</h3>
-        <h4 className='d-flex justify-content-center '>Por favor, ingresa tus datos para finalizar tu compra.</h4>
+        <h3 className='d-flex justify-content-center title'>Felicitaciones! Ya estás en el final de tu proceso de compra.</h3>
+        <h4 className='d-flex justify-content-center title'>Por favor, ingresa tus datos para finalizar tu compra.</h4>
         <br />
         <div className='d-flex justify-content-center container-form'>
             <h5>Formulario de contacto</h5>

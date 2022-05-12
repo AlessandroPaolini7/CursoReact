@@ -8,11 +8,12 @@ function ItemListContainer() {
     const [loading, setLoading] = useState(true);
     const {categoryId} = useParams();
 
+    //Se cargan los items de la colección "productos".
+    //Luego, si selecciono una categoría, se filtran los items por el id de dicha categoría. 
+    //Esto se hace porque, en la base de datos, los items tienen un campo "category" que es un array de strings.
     useEffect(()=>{
         setLoading(true);
         const db = getFirestore();
-
-        
         if (!categoryId){
             const itemsCollection = collection(db, "productos");
             getDocs(itemsCollection).then(item =>{
