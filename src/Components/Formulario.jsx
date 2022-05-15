@@ -72,7 +72,7 @@ return (
             </div>
             <br />
             <div className='d-flex justify-content-center '>
-            <Button variant='dark' type='submit' onClick={()=>{
+            <Button variant='dark' id='buttonDetail' type='submit' onClick={()=>{
                 terminarCompra();
             }}>Comprar</Button>
             </div>

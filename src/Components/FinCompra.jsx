@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function FinCompra({name,email,phone,id}) {
   return (
@@ -28,6 +30,7 @@ function FinCompra({name,email,phone,id}) {
             <br />
             <h5 className='d-flex justify-content-center '>Gracias por su compra!</h5>
         </div>
+        <Link to = '/' className='d-flex justify-content-center text-white'><Button id='buttonDetail' variant='dark' >Volver</Button></Link>
     </>
   )
   
