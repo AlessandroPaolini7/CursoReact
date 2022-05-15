@@ -27,10 +27,10 @@ function Cart() {
                     <div className="col-sm-4 p-2 item-name">
                       <h5 className="mb-1">{item.name}</h5>
                     </div>
-                    <div className="col-sm-1 p-2 item-price">
-                      <p className="mb-1 item-price">${item.price }</p>
+                    <div className="col-sm-1 p-2 item-price-cart">
+                      <p className="mb-1 item-price-cart">${item.price }</p>
                     </div>
-                    <div className="col-sm-4 p-2 item-cant">
+                    <div className="col-sm-3 p-2 item-cant">
                       <p className="mb-1">Cant: {item.count}</p>
                     </div>
                     <div className="col-sm-1 p-2 btnEliminar">
